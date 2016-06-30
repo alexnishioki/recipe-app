@@ -1,0 +1,39 @@
+<!-- 				$scope.ingredients = []
+					$scope.title = []
+					$scope.description = [] 																																	-->
+
+	<div id='windowDiv'>
+	<div class='form-group'>
+
+	<div class=''>
+		
+	</div>
+		<label id='formIngredients'>add ingredients</label>
+		<div class='animated 1 slideInLeft repeat' ng-repeat='newIngredient in ingredients'>
+		<input class='form-control pantry-input' style='background:#828282' type="text"  name="" maxlength=70  ng-model='newIngredient.ingredients' value='newIngredient.ingredients' placeholder="ingredient: {{$index + 1}}">
+		</div>
+		<label id='formDescription'>add directions</label>
+		<div class='animated 1 slideInLeft repeat' ng-repeat='newDescription in description'>
+		<input id='directions' class='animated 1 slideInLeft repeat form-control pantry-input' style='background:#828282' ng-model='newDescription.description' type="text"  name="" maxlength=70  ng-model='newDescription.description' value='newDescription.description' placeholder="step: {{$index + 1}}"> 
+		</div>
+	</div>
+		<button id='addInput' ng-click='addIngredient($index);' class='btn btn-default pull-left'>add recipe</button>
+
+		<button id='submitValue' ng-click='addDescription($index);' class='btn btn-default pull-left' >add steps</button>
+
+		<button id='submitRecipe' ng-click='submitRecipe($index);refreshData(); show = !show' class='btn btn-default pull-right'>submit</button>
+			<div id='recipeBox' class='pull-right'>
+				<!-- <p ng-repeat='ingredient in allUserDbData track by $index' class='col-md-offset-6 col-md-4 recipeList pull-right' ng-if='ingredient.description[0] !== null' ng-repeat='(key,val) in description[0]' class='bWidth' style='padding-left:10px'>{{ingredient[0].description}}</p> -->
+				
+				<p id='ingredientsTwo' class='col-md-offset-6 col-md-4 recipeList' ng-repeat='ingredient in allUserDbData track by $index'><span ng-if='ingredient.ingredient' !== null' class='bWidth' style='padding-left:10px'>&#8226; {{ingredient.ingredient}}</span>
+				</p>
+				</div>
+				
+				<div id='splitDirections'>
+				<p id='directionsTwo' class='col-md-offset-6 col-md-4 recipeList' ng-model='description.description' ng-repeat='description in description track by $index'><span class='bWidth' style='padding-left:10px'> &mdash;{{description.description}}</span></p>
+				</div>
+			
+			</div>
+		
+
+

@@ -1,0 +1,29 @@
+
+<div id='container'>
+  <div  class='row'>
+    <div  ng-repeat='input in recipes track by $index' >
+      <div ng-repeat='(key,val) in input' >
+        <div class="flip-container" ng-class="{'red' : toggle}" >
+          <div class="flip" >
+            <div class="front" >
+              <p><img ng-src='{{val.image_url}}'></p>
+            </div>
+              <div ng-click='toggle = !toggle;' class="back" ng-class="{'red' : toggle}">
+                <h3>{{val.title}}</h3>
+                  <ul ng-repeat='each in val.ingredients track by $index'>
+                    <li>{{each}}</li>
+                  </ul>
+                  <ul><a ng-click='extLink(val.source_url)'><li>description</li></a></ul>        
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+
+
+
+

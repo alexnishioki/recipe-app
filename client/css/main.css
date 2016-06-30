@@ -1,0 +1,669 @@
+body {
+ background: #212121;
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  height:600px;
+}
+
+.flip-container:hover .flip{
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
+.flip-container{
+-webkit-perspective: 1000;
+-moz-perspective: 1000;
+-o-perspective: 1000;
+perspective: 1000;
+margin-left:20px;
+margin-top:20px;
+/*z-index:5;*/
+
+
+
+
+
+   -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+
+  float:left;
+  width:300px;
+
+
+}
+
+.flip {
+-webkit-transition: 0.6s;
+-webkit-transform-style: preserve-3d;
+-moz-transition: 0.6s;
+-moz-transform-style: preserve-3d;
+-o-transition: 0.6s;
+-o-transform-style: preserve-3d;
+transition: 0.6s;
+transform-style: preserve-3d;
+position: absolute;
+
+
+}
+
+
+.front, .back {
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+backface-visibility: hidden;
+position: absolute;
+-webkit-transition: opacity linear 0.5s;
+    transition: opacity linear 0.5s;
+
+
+
+
+top: 0;
+left: 0;
+}
+.front{
+background:-webkit-radial-gradient(white 30%, transparent 100%);
+color: #ddd;
+z-index: 2;
+
+
+}
+
+li{
+  opacity:0;
+}
+
+
+
+.front p, .back p{
+text-align: center;
+line-height: 300px;
+font-weight: bolder;
+font-family: Helvetica,Arial,Georgia,Times New Roman;
+text-align: center;
+font-size: 400%; 
+text-transform: uppercase;
+}
+.flip-container, .front, .back {
+width: 340px;
+height: 340px;
+
+
+}
+
+
+
+.flip-container .front:hover .flip{
+transform: rotateY(180deg);
+}
+
+
+.back{
+background: #ddd;
+color: #333;
+transform: rotateY(180deg);
+
+-webkit-transition: opacity linear 0.5s;
+    transition: opacity linear 0.5s; 
+     -webkit-transition: ease 0.5s;
+    transition: ease 0.5s;
+    position:absolute;
+
+
+
+}
+
+.flip {
+transition: 0.6s;
+transform-style: preserve-3d;
+position: relative;
+}
+.front, .back {
+backface-visibility: hidden;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+
+.front p, .back p{
+text-align: center;
+line-height: 300px;
+font-weight: bolder;
+font-family: Helvetica,Arial,Georgia,Times New Roman;
+text-align: center;
+font-size: 400%; 
+text-transform: uppercase;
+}
+
+
+.flip-container.active{
+   /* z-index: 9999; */
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+
+
+
+ }
+
+.form-inline{
+  position:fixed;
+  width:200px;
+ text-align:center;
+
+ }
+
+
+
+ div.flip-container{
+  position:relative;
+  top:80px;
+ }
+
+ div.flip-container:hover{
+  position:relative;
+
+ }
+
+ img{
+  width:340px;
+  height:340px;
+ }
+
+ h3{
+  text-align:center;
+  color:  #E0E0E0 ;
+ }
+
+.form-control{
+-webkit-box-shadow: inset 8px 3px 236px 45px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 8px 3px 236px 45px rgba(0,0,0,0.75);
+box-shadow: inset 8px 3px 236px 45px rgba(0,0,0,0.75);
+border-radius:5px;
+  margin-left: 460px;
+  width:400px;
+  margin-top:52px;
+  max-width:400px;
+
+ }
+
+.red {
+    -webkit-transition: ease 0.5s;
+    transition: ease 0.5s;
+position:absolute;
+  z-index:100;
+-webkit-transform: scale(2); 
+height:900px;
+font-size:14px;
+text-decoration:bold;
+  top: 50%;
+  -webkit-transform: translateY(-20%);
+
+
+
+}
+
+/*.red:active{
+  z-index:130;
+}*/
+
+.flip .red:hover{
+  background-image:url("http://farm3.static.flickr.com/2629/3723314555_33b0af6a44.jpg");
+  position:absolute;
+    transition: background-image .3s ease;
+  /*  z-index:140;*/
+}
+
+.flip .red ul li{
+ 
+transition:opacity .5s ease;
+ opacity:1;
+ color:#D0D0D0 ;
+
+
+}
+
+.flip .back{
+background:-webkit-radial-gradient(white 15%, transparent 100%);
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+-webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    z-index:150;
+    position:absolute;
+
+  background-image:url('http://4.bp.blogspot.com/_jFM-Fd8NDFE/TNfzcrTb9qI/AAAAAAAALBY/7CZSOF3I1cE/s1600/Texture+of+the+Day-1.jpg');
+    }
+
+
+
+    .flip .back li{
+      transition:opacity .5s ease;
+      color:  #D0D0D0 ;
+      opacity:0;
+      
+
+    }
+
+.blue{
+ background;
+ opacity:0;
+}
+
+.btn{
+/*background: linear-gradient(45deg, #b5bdc8 0%,#828c95 42%,#28343b 86%);  border:none;
+*/  color:white ;
+    position: relative;
+  top: 92px;
+  right:662px;
+  text-shadow:7px 7px 2px #888888;
+  box-shadow:inset 0 0 10px 4px white,0 0 4px 2px white;
+  width:80px;
+  height:30px;
+  transition: opacity 2s ease;
+  border:none;
+  border-radius:5px;
+  opacity:.7;
+  transition: border-radius .5s ease;
+  margin-right:420px;
+  z-index:2;
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+
+  background:url('http://4.bp.blogspot.com/-J1A77dHUTO8/Vak2RfMWc3I/AAAAAAAADjw/cDriMlTTpEI/s1600/Pattern_backgrounds_vol_vol.01_4.jpg');
+  background-size: 50% auto;
+  animation: animatedBackground 2s linear infinite;
+}
+
+
+  @keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+
+.btn:active{
+    animation:x .10s 2 alternate;
+    
+}
+
+.btn:hover{
+  transition: opacity 1s ease;
+  opacity:.7;
+  transition:border-radius .5s ease, box-shadow .5s ease;
+  border-radius:10px;
+  color:white;
+    box-shadow:inset 2px 2px 10px 4px white,0px 0px 6px 3px white;
+    border:none;
+
+}
+
+.btn:focus {
+  outline: none;
+
+}
+
+@keyframes x {
+  0% {
+   text-shadow:3px 3px 5px #888888;
+  box-shadow: inset -4px 4px 2px #888888;
+  background:linear-gradient(45deg, #f6f8f9 0%,#e5ebee 27%,#d7dee3 61%,#f5f7f9 100%);
+  color:#888888;
+  font-size:14px;
+  transform:scale(.9);
+  
+
+  }
+  50% {
+    box-shadow: inset -6px -6px 4px #888888;
+     text-shadow:4px 4px 3px #888888;
+     background:linear-gradient(45deg, #f6f8f9 0%,#e5ebee 27%,#d7dee3 61%,#f5f7f9 100%);
+     color:#888888;
+     font-size:14.2px;
+     transform:scale(.85);
+  }
+
+  100% {
+     box-shadow:inset -10px -8px 5px 20px #888888;
+      text-shadow:1px 1px 4px #888888;
+      background:linear-gradient(45deg, #f6f8f9 0%,#e5ebee 27%,#d7dee3 61%,#f5f7f9 100%);
+      color:#888888;
+      font-size:14.4px;
+      transform:scale(.8);
+  }
+}
+
+#container{
+position:relative;
+marign-top:0px;
+}
+
+#pantry-button{
+position:absolute;
+top:50px;
+left:35px;
+transition:;
+}
+
+.animate{
+  transition: .1s linear all;
+}
+
+
+.repeat.ng-move,
+.repeat.ng-enter,
+.repeat.ng-leave {
+    -webkit-transition:all linear 1.0s;
+    transition:all linear 1.0s;
+}
+
+.repeat.ng-leave.ng-leave-active,
+.repeat.ng-move,
+.repeat.ng-enter {
+    opacity:0;
+
+}
+
+.repeat.ng-leave,
+.repeat.ng-move.ng-move-active,
+.repeat.ng-enter.ng-enter-active {
+    opacity:1;
+
+}
+
+
+.pantry-input:focus{
+    background:#383838;
+}
+
+input{
+    background-color:#383838;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: .5s;
+}
+
+#addInput{
+  background:linear-gradient(45deg, #f6f8f9 0%,#e5ebee 27%,#d7dee3 61%,#f5f7f9 100%);
+  color:white ;
+    position: absolute;
+  top: 92px;
+  left:37px;
+  text-shadow:7px 7px 2px #888888;
+  box-shadow:inset 0 0 10px 4px white,0 0 4px 2px white;
+  width:100px;
+  height:30px;
+  margin-top:18px;
+  transition: opacity 2s ease;
+  border:none;
+  border-radius:5px;
+  opacity:.7;
+  transition: border-radius .5s ease;
+  margin-right:420px;
+  z-index:2;
+  background:url('http://4.bp.blogspot.com/-J1A77dHUTO8/Vak2RfMWc3I/AAAAAAAADjw/cDriMlTTpEI/s1600/Pattern_backgrounds_vol_vol.01_4.jpg');
+  background-size: 50% auto;
+
+  animation: animatedBackground 1.2s linear infinite;
+}
+
+#addInput:active{
+    animation:x .10s 2 alternate;
+    }
+
+#addInput:hover{
+  transition: opacity 2s ease;
+  opacity:.4;
+  transition:border-radius .5s ease;
+  border-radius:10px;
+  color:#383838;
+}
+
+.pantry-input{
+  margin-top:20px;
+  margin-left:30px;
+  background:#383838;
+  color:#383838;
+  padding-top:5px;
+  border-radius:0;
+  border-bottom:1px solid white;
+  border-top:none; 
+  border-left:none;
+  border-right:none;
+  opacity:1;
+  transition:all linear 1.0s;
+  
+
+}
+
+input[type="text"]:focus{
+  border-color:#680000 ;
+}
+
+input[type="textarea"]:focus{
+  border-color:#680000 ;
+}
+
+input[placeholder]{
+  opacity:.7;
+}
+
+#submitValue{
+    position:absolute;
+    width:100px;
+    left:141px;
+    text-align:center;
+    
+  }
+
+.description{
+  position:absolute;
+  left:30px;
+  background:#828282;
+  border-bottom:1px solid white;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  width:400px;
+  height:100px;
+  text-align:left;
+  margin-top:25px;
+  border-radius:0;
+   opacity:1;
+   max-height:400px;
+   transition:all linear 4.0s,max-height 5s;
+}
+
+
+.expandDiv{
+height:300px;
+}
+
+.recipeList{ 
+  position:relative;
+  width:200px;
+  font-size:16px;
+/*  border-bottom:1px dotted white;
+*/  list-style-type: square;
+
+}
+
+#directions{
+  margin-top:0px;
+  height:40px;
+  display: block;
+  }
+
+  #directions[placeholder] {
+    height:40px;
+  }
+
+
+#submitValue{
+  background:url('http://4.bp.blogspot.com/-J1A77dHUTO8/Vak2RfMWc3I/AAAAAAAADjw/cDriMlTTpEI/s1600/Pattern_backgrounds_vol_vol.01_4.jpg');
+  background-size: 50% auto;
+  top:110px;
+  border:none;
+
+  animation: animatedBackground 1.6s linear infinite;
+
+}
+
+
+
+#submitValue:active{
+    animation:x .10s 2 alternate;
+    }
+
+#search{
+  background-color: #555;
+  position:absolute;
+    box-shadow: 0 0 5px 10px #555;
+    animation:x .10s 2 alternate;
+    border:none;
+    top:0px;
+    z-index:80;
+    -webkit-transition: background-color .7s ease-in-out,box-shadow .7s ease-in-out,border-radius .5s ease-in-out;
+}
+
+#search:focus{
+  box-shadow:0 0 5px 10px white;
+  background-color:white;
+  outline: none;
+  -webkit-transition: background-color .7s ease-in-out,box-shadow .7s ease-in-out,border-radius .5s ease-in-out;
+   opacity: 1;
+   border-radius:30px;
+}
+
+#recipeBox{
+  position:absolute;
+top:130px;
+text-align:left;
+right:10%;
+opacity:.8;
+height:80%;
+padding-bottom:5px;
+width:30%;
+opacity:.4;
+overflow:scroll;
+color:#828282;
+/*background:#E0E0E0;*/
+/*background-image:url('http://theworkwearstore.com/mm5/img/bg/background.jpg');
+*/border:none;
+/*background-image: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255, 1) 90%),linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+*/box-shadow: 0px 0px 30px 15px #E8D7BA;
+
+
+}
+
+#windowDiv{
+  height:1000px;
+  padding-top:100px;
+}
+
+.fridge{
+  margin-top:18px;
+}
+
+#formDescription{
+  margin-left:170px;
+  margin-top:90px;
+  color:#828282;
+  text-decoration: underline;
+}
+
+#formIngredients{
+ margin-left:170px;
+  margin-top:70px;
+  color:#828282;
+  text-decoration: underline;
+}
+
+#submitRecipe {
+  position:absolute;
+  left:330px;
+  border:none;
+  width:100px;
+  background:url('http://4.bp.blogspot.com/-J1A77dHUTO8/Vak2RfMWc3I/AAAAAAAADjw/cDriMlTTpEI/s1600/Pattern_backgrounds_vol_vol.01_4.jpg');
+  background-size: 50% auto;
+  top:110px;
+  animation: animatedBackground 2.3s linear infinite;
+}
+
+#submitRecipe:active{
+    animation:x .10s 2 alternate;
+    }
+
+#addRecipe:hover{
+  transition: opacity 2s ease;
+  font-color:black;
+  opacity:.4;
+  transition:border-radius .5s ease;
+  border-radius:10px;
+}
+
+#directionsTwo{
+  margin-top:2px;
+  margin-left:5%;
+  margin-right:5%;
+  width:90%;
+  height:20px;
+
+}
+
+#ingredientsTwo{
+   border-bottom:1px solid white;
+   padding-bottom:5px;
+  margin-top:5%;
+  margin-left:5%;
+  margin-right:5%;
+  width:90%;
+  height:23px;
+ 
+
+}
+
+#recipe_description{
+  color:black;
+  background:white;
+}
+
+#splitIngredients{
+  position:relative;
+  padding-top:100px;
+  color:white;
+}
+
+#ingredientsTwo{
+  color:white;
+  background:red;
+}
+
+
+
+
+
+
+
+
+
+ 

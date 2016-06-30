@@ -1,0 +1,20 @@
+	<div id='windowDiv'>
+	<div class='form-group'>
+		<input ng-repeat='name in ingredients track by name.title' maxlength=70 class='form-control pantry-input animated 1 slideInLeft repeat' style='background:#828282;' ng-model='name.title' value='name.title' placeholder='recipe name'>
+			<div class='animated 1 slideInLeft repeat' ng-repeat='item in ingredients track by $index'>
+		<input ng-repeat='ingredient in ingredients.name track by ingredient.name' value='ingredient' maxlength=70 style='background:#828282' class='form-control pantry-input' style='background-color:#212121;' ng-model='name' type="text"  name="" placeholder="ingredient: {{$index + 1}}">
+			</div>
+		<input ng-repeat='item in ingredients' type='text' ng-click='divHeight()' ng-class="{description:'expandDiv'}" class='animated 1 slideInLeft repeat' placeholder='directions' value='item.description' ng-model='item.description' rows="4" cols="51" style='background:#212121;' class='description' type='text'>	
+	</div>
+		<button id='addInput' ng-click='insertValue(ingredients.name);'  class='btn btn-default pull-left' >new</button>
+		<button id='submitValue' ng-click='addIngredient($index);'ng-dblclick="clear();getRecipesOnSubmit()" class='btn btn-default pull-left' >add ingredients</button>
+			<div id='recipeBox' class='ng-hide'>
+				<p  class='col-md-offset-6 col-md-4 recipeList' ng-model='title.title' ng-repeat='title in ingredients track by $index'><span class='bWidth' style='padding-left:10px'>{{title.title[0]}}</span>
+				</p>
+				<p class='col-md-offset-6 col-md-4 recipeList' ng-model='name.name' ng-repeat='name in ingredients track by $index'><span class='bWidth' style='padding-left:10px'>{{name.name[0]}}</span>
+				</p>
+				<p id='directions' class='col-md-offset-6 col-md-4 recipeList' ng-repeat='description in ingredients track by $index'><span class='bWidth' style='padding-left:10px'>{{description.description}}</span></p>
+			</div>
+		</div>
+
+
